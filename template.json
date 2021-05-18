@@ -1,0 +1,37 @@
+{
+  "index_patterns": [
+    "chialog*"
+  ],
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "duration": {
+          "match": "*duration",
+          "match_mapping_type": "double",
+          "mapping": {
+            "type": "double"
+          }
+        }
+      },
+      {
+        "timestamps": {
+          "match": "*date",
+          "match_mapping_type": "string",
+          "mapping": {
+            "type": "date",
+            "format": "E L  d H:m:s Y"
+          }
+        }
+      },
+      {
+        "strings": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }
+    ]
+  }
+}
