@@ -1,6 +1,6 @@
 {
   "index_patterns": [
-    "result*"
+    "chialog*"
   ],
   "mappings": {
     "dynamic_templates": [
