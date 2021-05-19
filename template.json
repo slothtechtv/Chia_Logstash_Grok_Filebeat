@@ -1,13 +1,12 @@
 {
   "index_patterns": [
-    "chialog*"
+    "result*"
   ],
   "mappings": {
     "dynamic_templates": [
       {
         "duration": {
           "match": "*duration",
-          "match_mapping_type": "double",
           "mapping": {
             "type": "double"
           }
@@ -15,11 +14,10 @@
       },
       {
         "timestamps": {
-          "match": "*date",
-          "match_mapping_type": "string",
+          "match": "*time",
           "mapping": {
             "type": "date",
-            "format": "E L  d H:m:s Y"
+            "format": "EEE LLL  d HH:mm:ss yyyy"
           }
         }
       },
